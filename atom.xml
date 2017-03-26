@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hogwarts&#39;s Study Room</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://aas8688.github.io/"/>
+  <updated>2017-03-26T05:42:45.000Z</updated>
+  <id>https://aas8688.github.io/</id>
+  
+  <author>
+    <name>燊燊</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Using Hexo to Deploy to GitHub Pages</title>
+    <link href="https://aas8688.github.io/2017/03/25/Using-Hexo-Github-to-build-a-blog/"/>
+    <id>https://aas8688.github.io/2017/03/25/Using-Hexo-Github-to-build-a-blog/</id>
+    <published>2017-03-26T00:17:57.000Z</published>
+    <updated>2017-03-26T05:42:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>So this is my first blog (first post using markdown as well). It is more like a study summary for myself rather than a tutorial. I hope there are not too many mistakes :)</p>
+<a id="more"></a>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p>Hexo is a fast, simple and powerful blog framework.</p>
+<ul>
+<li>Blazing Fast</li>
+<li>Markdown Support</li>
+<li>One-command Deploymand</li>
+<li>Various Plugin </li>
+</ul>
+<h1 id="Requirments"><a href="#Requirments" class="headerlink" title="Requirments"></a>Requirments</h1><ul>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a> Account</li>
+</ul>
+<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><p><code>$ npm install -g hexo-cli</code></p>
+<h1 id="Initialize-Hexo"><a href="#Initialize-Hexo" class="headerlink" title="Initialize Hexo"></a>Initialize Hexo</h1><h2 id="Create-folder-username-github-io"><a href="#Create-folder-username-github-io" class="headerlink" title="Create folder username.github.io"></a>Create folder username.github.io</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;username.github.io&gt;</div><div class="line">$ cd &lt;username.github.io&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<h2 id="Generate-static-file"><a href="#Generate-static-file" class="headerlink" title="Generate static file"></a>Generate static file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo g # or hexo generate</div></pre></td></tr></table></figure>
+<h2 id="Run-a-test-on-server"><a href="#Run-a-test-on-server" class="headerlink" title="Run a test on server"></a>Run a test on server</h2><p><code>$ hexo s # or hexo server</code></p>
+<p>At <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>, you will be able to see a <em>Hello World</em> post.</p>
+<h1 id="Commond-use-command"><a href="#Commond-use-command" class="headerlink" title="Commond use command"></a>Commond use command</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;post&quot;  # create new post</div><div class="line">$ hexo new page &quot;page&quot; # create new page</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo n == hexo new </div><div class="line">$ hexo g == hexo generate</div><div class="line">$ hexo s == hexo server</div><div class="line">$ hexo d == hexo deploy</div></pre></td></tr></table></figure>
+<h1 id="Create-a-new-post-file"><a href="#Create-a-new-post-file" class="headerlink" title="Create a new post file"></a>Create a new post file</h1><h2 id="Create-a-post"><a href="#Create-a-post" class="headerlink" title="Create a post"></a>Create a post</h2><p><code>$ hexo new &#39;test&#39;</code></p>
+<p>A <code>test.md</code> file is created and saced to the  <code>souce/_posts</code> folder.</p>
+<p>You can type type in anything you want, click save and see the changes.</p>
+<h1 id="Change-theme"><a href="#Change-theme" class="headerlink" title="Change theme"></a>Change theme</h1><h2 id="Download-theme"><a href="#Download-theme" class="headerlink" title="Download theme"></a>Download theme</h2><p>For instance, How to use this one. <a href="https://github.com/iissnan/hexo-theme-next themes/next" target="_blank" rel="external">Next</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd themes</div><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<h2 id="Use-the-theme"><a href="#Use-the-theme" class="headerlink" title="Use the theme"></a>Use the theme</h2><p>open <code>_config.yml</code> and chage <code>theme: landscape</code> to <code>theme: next</code></p>
+<p> landscape is default theme.</p>
+<h1 id="Deploy-to-GitHub-Pages"><a href="#Deploy-to-GitHub-Pages" class="headerlink" title="Deploy to GitHub Pages"></a>Deploy to GitHub Pages</h1><h2 id="Before-first-deployment"><a href="#Before-first-deployment" class="headerlink" title="Before first deployment"></a>Before first deployment</h2><p>Modify some setting in <code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>install <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
+<p><code>$ npm install hexo-deployer-git --save</code> </p>
+<h2 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h2><p><code>$ hexo d # or deploy</code></p>
+<p>Now open <a href="https://username.github.io/" target="_blank" rel="external">https://username.github.io/</a>, you can see your new blog on GitHub Pages.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;So this is my first blog (first post using markdown as well). It is more like a study summary for myself rather than a tutorial. I hope there are not too many mistakes :)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://aas8688.github.io/categories/hexo/"/>
+    
+    
+      <category term="blog" scheme="https://aas8688.github.io/tags/blog/"/>
+    
+  </entry>
+  
+</feed>
